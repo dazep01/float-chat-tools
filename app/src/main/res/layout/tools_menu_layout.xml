@@ -1,26 +1,97 @@
-<!-- res/layout/tools_menu_layout.xml -->
+<!-- float-chat-tools/app/src/main/res/layout/tools_menu_layout.xml -->
+
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:background="#333333"
-    android:padding="8dp">
+    android:padding="12dp"
+    android:gravity="center"
+    android:elevation="8dp">
 
+    <!-- WhatsApp -->
     <ImageView
         android:id="@+id/btnWhatsapp"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:src="@drawable/ic_whatsapp"
-        android:contentDescription="WhatsApp" />
+        android:contentDescription="WhatsApp"
+        android:layout_margin="6dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true" />
 
-    <!-- Telegram, Instagram, Messenger, Volume, Flashlight, Close -->
-    <!-- Copy-paste ImageView serupa, ganti id dan src -->
+    <!-- Telegram -->
+    <ImageView
+        android:id="@+id/btnTelegram"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_telegram"
+        android:contentDescription="Telegram"
+        android:layout_margin="6dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true" />
 
+    <!-- Instagram -->
+    <ImageView
+        android:id="@+id/btnInstagram"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_instagram"
+        android:contentDescription="Instagram"
+        android:layout_margin="6dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <!-- Messenger -->
+    <ImageView
+        android:id="@+id/btnMessenger"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_messenger"
+        android:contentDescription="Messenger"
+        android:layout_margin="6dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <!-- Volume Control -->
+    <ImageView
+        android:id="@+id/btnVolume"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_volume"
+        android:contentDescription="Volume"
+        android:layout_margin="6dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <!-- Flashlight -->
+    <ImageView
+        android:id="@+id/btnFlashlight"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_flashlight"
+        android:contentDescription="Flashlight"
+        android:layout_margin="6dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <!-- Close Menu -->
     <ImageView
         android:id="@+id/btnCloseMenu"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:src="@drawable/ic_close"
-        android:contentDescription="Close" />
+        android:contentDescription="Close"
+        android:layout_margin="6dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true" />
 
 </LinearLayout>
