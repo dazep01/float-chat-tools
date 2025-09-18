@@ -1,0 +1,9 @@
+<!-- res/layout/floating_button_layout.xml -->
+<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="60dp"
+    android:layout_height="60dp"
+    android:background="@drawable/circle_background"
+    android:src="@drawable/ic_chat_bubble"
+    android:padding="12dp"
+    android:scaleType="centerInside"
+    android:contentDescription="Float Button" />
