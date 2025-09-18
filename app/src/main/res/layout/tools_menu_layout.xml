@@ -1,0 +1,26 @@
+<!-- res/layout/tools_menu_layout.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="#333333"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/btnWhatsapp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_whatsapp"
+        android:contentDescription="WhatsApp" />
+
+    <!-- Telegram, Instagram, Messenger, Volume, Flashlight, Close -->
+    <!-- Copy-paste ImageView serupa, ganti id dan src -->
+
+    <ImageView
+        android:id="@+id/btnCloseMenu"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_close"
+        android:contentDescription="Close" />
+
+</LinearLayout>
