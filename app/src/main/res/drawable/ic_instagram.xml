@@ -1,0 +1,11 @@
+<!-- res/drawable/ic_instagram.xml -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24"
+    android:tint="#E1306C">
+    <path
+        android:fillColor="@android:color/white"
+        android:pathData="M7.8,2h8.4C19.4,2 22,4.6 22,7.8v8.4c0,3.2 -2.6,5.8 -5.8,5.8H7.8C4.6,22 2,19.4 2,16.2V7.8C2,4.6 4.6,2 7.8,2zM12,6c-2.2,0 -4,1.8 -4,4s1.8,4 4,4s4,-1.8 4,-4S14.2,6 12,6zM16,18c0,-0.6 -0.4,-1 -1,-1h-6c-0.6,0 -1,0.4 -1,1v0.5c0,0.6 0.4,1 1,1h6c0.6,0 1,-0.4 1,-1V18z" />
+</vector>
