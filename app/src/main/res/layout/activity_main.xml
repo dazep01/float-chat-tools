@@ -1,0 +1,42 @@
+<!-- float-chat-tools/app/src/main/res/layout/activity_main.xml -->
+
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center"
+    android:background="#F5F5F5">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FLOAT TOOLS v1.0\n(PERSONAL USE)"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="32dp" />
+
+    <Button
+        android:id="@+id/btnStartService"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="▶ START FLOATING SERVICE"
+        android:backgroundTint="#4CAF50" />
+
+    <Button
+        android:id="@+id/btnOpenDrawPermission"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🔓 OPEN DRAW OVER APPS"
+        android:layout_marginTop="12dp" />
+
+    <Button
+        android:id="@+id/btnOpenNotifAccess"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🔔 OPEN NOTIFICATION ACCESS"
+        android:layout_marginTop="12dp" />
+
+</LinearLayout>
