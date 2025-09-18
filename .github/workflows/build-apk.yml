@@ -1,5 +1,4 @@
 # .github/workflows/build-apk.yml
-
 name: Build APK
 
 on:
@@ -7,11 +6,13 @@ on:
     branches: [ main, master ]
   pull_request:
     branches: [ main, master ]
-  workflow_dispatch: # Manual trigger from Actions tab
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      ANDROID_SDK_ROOT: ${{ runner.temp }}/android-sdk
 
     steps:
       - name: Checkout code
@@ -26,8 +27,22 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x ./gradlew
 
+      - name: Install Android command-line tools & SDK packages
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wget unzip
+          mkdir -p "${ANDROID_SDK_ROOT}/cmdline-tools"
+          wget -q https://dl.google.com/android/repository/commandlinetools-linux-9477386_latest.zip -O /tmp/cmdline.zip
+          unzip -q /tmp/cmdline.zip -d "${ANDROID_SDK_ROOT}/cmdline-tools"
+          # Move into path expected by sdkmanager
+          mkdir -p "${ANDROID_SDK_ROOT}/cmdline-tools/latest"
+          mv "${ANDROID_SDK_ROOT}/cmdline-tools/cmdline-tools"/* "${ANDROID_SDK_ROOT}/cmdline-tools/latest/" || true
+          export PATH="${ANDROID_SDK_ROOT}/cmdline-tools/latest/bin:${ANDROID_SDK_ROOT}/platform-tools:${PATH}"
+          yes | "${ANDROID_SDK_ROOT}/cmdline-tools/latest/bin/sdkmanager" --sdk_root="${ANDROID_SDK_ROOT}" "platform-tools" "platforms;android-33" "build-tools;33.0.2"
+          yes | "${ANDROID_SDK_ROOT}/cmdline-tools/latest/bin/sdkmanager" --licenses
+
       - name: Build APK
-        run: ./gradlew assembleDebug
+        run: ./gradlew assembleDebug --no-daemon
 
       - name: Show built APK files (for debugging)
         run: ls -la app/build/outputs/apk/debug || true
